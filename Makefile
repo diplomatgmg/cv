@@ -15,7 +15,7 @@ down: ## compose down
 	@docker compose down
 
 deps: ## Установка зависимостей
-	@cd $(FRONTEND_DIR) && bun i
+	@cd $(FRONTEND_DIR) && bun i --frozen-lockfile
 
 lint: ## Запуск линтеров без правок
 	@cd $(FRONTEND_DIR) && bun lint
