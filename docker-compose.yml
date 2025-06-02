@@ -1,0 +1,22 @@
+name: ${PROJECT_NAME}
+
+services:
+  frontend:
+#    image: ${DOCKER_USERNAME}/${PROJECT_NAME}-frontend:latest
+    container_name: ${PROJECT_NAME}-frontend
+    env_file:
+      - .env
+    networks:
+      - app-network
+    ports:
+      - "${VITE_PORT}:${VITE_PORT}"
+    healthcheck:
+      test: [ "CMD", "wget", "--spider", "-q", "http://localhost" ]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 3s
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,10 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      target: ${BUILD_TARGET}
+    volumes:
+      - ./frontend:/app/frontend
+      - /app/frontend/node_modules
+    healthcheck:
+      test: [ "CMD", "wget", "--spider", "-q", "http://${VITE_HOST}:${VITE_PORT}" ]
