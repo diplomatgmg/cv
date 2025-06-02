@@ -1,26 +1,38 @@
-FROM oven/bun:1.2.15-alpine AS base
+FROM oven/bun:1.2.15-alpine AS deps
 
 ENV PATH="/app/node_modules/.bin:$PATH"
 
-WORKDIR /app
+WORKDIR /app/frontend
 
-COPY ./package.json ./bun.lock ./
-
-
-# ============================ #
-#        DEPS INSTALLING       #
-# ============================ #
-FROM base AS deps-dev
-
-RUN --mount=type=cache,target=/app/.cache/bun \
-    bun install --frozen-lockfile
+COPY package.json bun.lock ./
+RUN bun install --frozen-lockfile
 
 
 # ============================ #
-#        DEVELOPMENT           #
+#         DEVELOPMENT          #
 # ============================ #
-FROM deps-dev AS development
+FROM deps AS development
+
+COPY --from=deps /app/frontend/node_modules ./node_modules
+
+CMD ["bun", "dev"]
+
+
+# ============================ #
+#            BUILD             #
+# ============================ #
+FROM deps AS build
 
 COPY . .
 
-CMD ["bun", "run", "dev"]
+RUN bun run build
+
+
+# ============================ #
+#          PRODUCTION          #
+# ============================ #
+FROM nginx:1.28.0-alpine AS production
+
+COPY --from=build /app/frontend/dist /usr/share/nginx/html
+
+CMD ["nginx", "-g", "daemon off;"]
