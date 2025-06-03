@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider, Route, Navigate } from "react-router-dom"
 import { createRoutesFromElements } from "react-router-dom"
 import routes from "@/routes/routes"
-import CVPage from "@/pages/CVPage"
+import { CVPage } from "@/pages/CVPage"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
