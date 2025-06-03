@@ -8,7 +8,7 @@ const router = createBrowserRouter(
     <>
       <Route path={routes.ROOT} element={<Navigate to={routes.CV} replace />} />
       <Route path={routes.CV} element={<CVPage />} />
-      <Route path="*" element={<CVPage />} />
+      <Route path="*" element={<Navigate to={routes.CV} replace />} />
     </>
   )
 )
