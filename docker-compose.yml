@@ -2,6 +2,7 @@ name: ${PROJECT_NAME}
 
 services:
   frontend:
+    image: ${DOCKER_USERNAME}/${PROJECT_NAME}-frontend:latest
     container_name: ${PROJECT_NAME}-frontend
     env_file:
       - .env
