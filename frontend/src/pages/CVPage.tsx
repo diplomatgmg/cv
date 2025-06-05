@@ -43,9 +43,109 @@ export const CVPage = () => {
               </UserSocial>
             </UserLinkWrapper>
           </UpperLeftSidePaper>
-          <BottomLeftSidePaper>2</BottomLeftSidePaper>
+          <BottomLeftSidePaper>
+            <SectionWrapper>
+              <Section>
+                <SectionName>Skills</SectionName>
+                <SectionItems>
+                  <SkillTitle>General Knownledge</SkillTitle>
+                  <SkillNames>HTML, CSS, JavaScript, TypeScript</SkillNames>
+                  <SkillNames>Git, Github, Gitlab</SkillNames>
+                </SectionItems>
+                <SectionItems>
+                  <SkillTitle>Tools & Frameworks</SkillTitle>
+                  <SkillNames>HTML, CSS, TypeScript</SkillNames>
+                  <SkillNames>HTML, CSS, TypeScript</SkillNames>
+                  <SkillNames>HTML, CSS, TypeScript</SkillNames>
+                  <SkillNames>HTML, CSS, TypeScript</SkillNames>
+                </SectionItems>
+                <SectionItems>
+                  <SkillTitle>General Knownledge</SkillTitle>
+                  <SkillNames>HTML, CSS, TypeScript</SkillNames>
+                </SectionItems>
+              </Section>
+            </SectionWrapper>
+          </BottomLeftSidePaper>
         </LeftSidePaper>
-        <RightSidePaper>3</RightSidePaper>
+        <RightSidePaper>
+          <Section>
+            <SectionName>Profile</SectionName>
+            <SectionText>
+              Over 3 years of experience as a web front-end engineer who is willing to help businesses make products
+              that are accessible and scalable. Core skills include designing, building front-end architectures and
+              giving actionable insights that match computer science and web best practices.
+            </SectionText>
+          </Section>
+          <Section>
+            <SectionName>Profile</SectionName>
+            <SectionExperience>
+              <ExperienceHeader>
+                <ExperienceHeaderInner>
+                  <ExperienceProfession>Front-end Developer</ExperienceProfession>
+                  <ExperiencePlaceWork>HokuBit | Ako Pardazesh Novin Iranian</ExperiencePlaceWork>
+                </ExperienceHeaderInner>
+                <ExperienceHeaderInner>
+                  <ExperienceTime>1401/08 - Until Now</ExperienceTime>
+                </ExperienceHeaderInner>
+              </ExperienceHeader>
+              <ExperienceDetailsWrapper>
+                <ExperienceText>
+                  Designing and implementing features related to cryptocurrencies, such as prediction bot with detailed
+                  charts and information, social media analysis and so on. The main focus was on features that help the
+                  product achieve the necessary parts of the business model, along with improvements for SEO and
+                  accessibility.
+                </ExperienceText>
+                <ExperienceText>
+                  Tools and skills: Chart.js · Daisyui · WebSocket · Redux.js · Highcharts · Tailwind CSS · JavaScript ·
+                  React.js
+                </ExperienceText>
+              </ExperienceDetailsWrapper>
+            </SectionExperience>
+            <SectionExperience>
+              <ExperienceHeader>
+                <ExperienceHeaderInner>
+                  <ExperienceProfession>Back-end Developer</ExperienceProfession>
+                  <ExperiencePlaceWork>Nura Cashflow</ExperiencePlaceWork>
+                </ExperienceHeaderInner>
+                <ExperienceHeaderInner>
+                  <ExperienceTime>1401/01 - 7 Months</ExperienceTime>
+                </ExperienceHeaderInner>
+              </ExperienceHeader>
+              <ExperienceDetailsWrapper>
+                <ExperienceText>
+                  NURA Cashflow is a web-based software that allows financial and business managers to organize their
+                  cash flow and make decisions based on future events. After separating client from server codebase, I
+                  worked on several features, improved layout and overall code quality.
+                </ExperienceText>
+                <ExperienceText>
+                  Tools and skills: Chart.js · Figma · Highcharts · Sass · CSS · Tailwind CSS · WordPress · JavaScript ·
+                  Vue.js
+                </ExperienceText>
+                <ExperienceText>
+                  Tailwind CSS · WordPress · JavaScript · Vue.js Tools and skills: Chart.js · Figma · Highcharts · Sass
+                  · CSS
+                </ExperienceText>
+              </ExperienceDetailsWrapper>
+            </SectionExperience>
+            <SectionExperience>
+              <ExperienceHeader>
+                <ExperienceHeaderInner>
+                  <ExperienceProfession>Full-stack Developer</ExperienceProfession>
+                  <ExperiencePlaceWork>Freelance</ExperiencePlaceWork>
+                </ExperienceHeaderInner>
+                <ExperienceHeaderInner>
+                  <ExperienceTime>1398 - 3 Years</ExperienceTime>
+                </ExperienceHeaderInner>
+              </ExperienceHeader>
+              <ExperienceDetailsWrapper>
+                <ExperienceText>
+                  Working as a part-time web developer to help small to medium businesses achieve what they want in the
+                  world-wide web.
+                </ExperienceText>
+              </ExperienceDetailsWrapper>
+            </SectionExperience>
+          </Section>
+        </RightSidePaper>
       </Paper>
       <Paper />
     </Wrapper>
@@ -57,7 +157,13 @@ const A4HeightPx = 2246
 const BlockPadding = "1.75rem"
 
 const PrimaryTextColor = "#f8f8f8"
+const PrimaryDarkTextColor = "#0A0A0AFF"
+
 const SecondaryTextColor = "#e5e5e5"
+const SecondaryTextDarkColor = "#6b6b6b"
+
+const BackgroundPrimaryColor = "rgb(233, 247, 255)"
+const BackgroundSecondaryColor = "rgb(207, 240, 255)"
 
 const Wrapper = styled.div`
   background-color: #f0f0f0;
@@ -91,15 +197,16 @@ const UpperLeftSidePaper = styled.div`
   padding: ${BlockPadding};
 `
 
-const Username = styled.h1`
+const Username = styled.div`
   font-size: 3.5rem;
   line-height: 1;
   letter-spacing: 1px;
   margin: 0;
   color: ${PrimaryTextColor};
+  font-weight: bold;
 `
 
-const Profession = styled.h6`
+const Profession = styled.div`
   margin: 0;
   color: ${SecondaryTextColor};
   font-size: 2rem;
@@ -158,8 +265,186 @@ const UserSocial = styled(Icon)`
   padding: 0.75rem;
 `
 
-const BottomLeftSidePaper = styled.div``
+const BottomLeftSidePaper = styled.div`
+  height: 100%;
+  background-color: rgb(233, 247, 255);
+`
+
+const SectionWrapper = styled.div`
+  padding: ${BlockPadding};
+`
+
+const Section = styled.div`
+  color: ${PrimaryDarkTextColor};
+`
+
+const SectionName = styled.div`
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+`
+
+const SectionItems = styled.div`
+  margin-bottom: 2rem;
+`
+
+const SectionText = styled.div`
+  color: ${SecondaryTextDarkColor};
+  font-size: 1.5rem;
+`
+
+const SectionExperience = styled.div`
+  margin-left: 8rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 4rem;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 32px;
+    left: -66px;
+    width: 10px;
+    height: calc(100% + 4rem);
+    background-color: ${BackgroundSecondaryColor};
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+    &:before {
+      height: calc(100% - 2.25rem);
+    }
+  }
+`
+
+const ExperienceHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+
+const ExperienceHeaderInner = styled.div``
+
+const ExperienceProfession = styled.div`
+  font-size: 2rem;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: ${BackgroundSecondaryColor};
+    height: 72px;
+    width: 72px;
+    border-radius: 24px;
+    left: -98px;
+    top: -4px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: rgb(124, 215, 255);
+    height: 32px;
+    width: 32px;
+    border-radius: 12px;
+    top: 16px;
+    left: -78px;
+  }
+`
+
+const ExperiencePlaceWork = styled.div`
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: ${SecondaryTextDarkColor};
+`
+
+const ExperienceTime = styled.div`
+  color: ${SecondaryTextDarkColor};
+  font-size: 1.5rem;
+  font-weight: lighter;
+  background-color: ${BackgroundPrimaryColor};
+  padding: 0.75rem 1rem;
+  border-radius: 1.5rem;
+`
+
+const ExperienceDetailsWrapper = styled.div`
+  color: ${SecondaryTextDarkColor};
+  font-weight: lighter;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`
+
+const ExperienceText = styled.div`
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: ${BackgroundSecondaryColor};
+    height: 6px;
+    width: 24px;
+    top: 12px;
+    left: -64px;
+  }
+`
+
+const SkillTitle = styled.div`
+  position: relative;
+  z-index: 10;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 42px;
+    background-color: ${BackgroundSecondaryColor};
+    z-index: -1;
+    rotate: -5deg;
+  }
+`
+
+const SkillNames = styled(SectionText)`
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 10;
+  margin-left: 1.5rem;
+
+  &:before {
+    content: "●";
+    font-size: 1.4rem;
+    position: absolute;
+    left: -1.5rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: -21px;
+    width: 6px;
+    height: calc(100% + 1rem);
+    background-color: ${SecondaryTextDarkColor};
+    opacity: 0.15;
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+`
 
 const RightSidePaper = styled.div`
   width: 60%;
+  padding: ${BlockPadding};
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 `
