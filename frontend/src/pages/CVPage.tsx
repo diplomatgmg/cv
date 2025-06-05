@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi"
 import { FaGithub, FaTelegram } from "react-icons/fa"
+import HexletLogo from "@/assets/img/hexlet.png"
 
 export const CVPage = () => {
   return (
@@ -144,6 +145,17 @@ export const CVPage = () => {
                 </ExperienceText>
               </ExperienceDetailsWrapper>
             </SectionExperience>
+          </Section>
+          <Section>
+            <SectionName>Education</SectionName>
+            <EducationWrapper>
+              <EducationImage src={HexletLogo} />
+              <EducationInfo>
+                <EducationName>Hexlet College</EducationName>
+                <EducationDescription>Front-end Developer</EducationDescription>
+              </EducationInfo>
+              <ExperienceTime>1398 - 3 Years</ExperienceTime>
+            </EducationWrapper>
           </Section>
         </RightSidePaper>
       </Paper>
@@ -294,6 +306,42 @@ const SectionText = styled.div`
   font-size: 1.5rem;
 `
 
+const EducationWrapper = styled.div`
+  display: flex;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: ${BackgroundPrimaryColor};
+    height: 80px;
+    width: 80px;
+    border-radius: 24px;
+    top: -6px;
+    left: 12px;
+  }
+`
+
+const EducationImage = styled.img`
+  height: 48px;
+  z-index: 10;
+  position: relative;
+  left: 28px;
+  top: 6px;
+`
+
+const EducationInfo = styled.div`
+  margin-right: auto;
+  margin-left: 5rem;
+`
+
+const EducationName = styled.div``
+
+const EducationDescription = styled.div`
+  color: ${SecondaryTextDarkColor};
+  font-size: 1.5rem;
+`
+
 const SectionExperience = styled.div`
   margin-left: 8rem;
   display: flex;
@@ -305,10 +353,10 @@ const SectionExperience = styled.div`
     content: "";
     position: absolute;
     top: 32px;
-    left: -66px;
+    left: -80px;
     width: 10px;
     height: calc(100% + 4rem);
-    background-color: ${BackgroundSecondaryColor};
+    background-color: ${BackgroundPrimaryColor};
   }
 
   &:last-child {
@@ -334,12 +382,12 @@ const ExperienceProfession = styled.div`
   &:before {
     content: "";
     position: absolute;
-    background-color: ${BackgroundSecondaryColor};
-    height: 72px;
-    width: 72px;
+    background-color: ${BackgroundPrimaryColor};
+    height: 80px;
+    width: 80px;
     border-radius: 24px;
-    left: -98px;
-    top: -4px;
+    left: -116px;
+    top: -8px;
   }
 
   &:after {
@@ -350,7 +398,7 @@ const ExperienceProfession = styled.div`
     width: 32px;
     border-radius: 12px;
     top: 16px;
-    left: -78px;
+    left: -90px;
   }
 `
 
@@ -367,6 +415,7 @@ const ExperienceTime = styled.div`
   background-color: ${BackgroundPrimaryColor};
   padding: 0.75rem 1rem;
   border-radius: 1.5rem;
+  height: fit-content;
 `
 
 const ExperienceDetailsWrapper = styled.div`
@@ -385,11 +434,11 @@ const ExperienceText = styled.div`
   &:before {
     content: "";
     position: absolute;
-    background-color: ${BackgroundSecondaryColor};
+    background-color: ${BackgroundPrimaryColor};
     height: 6px;
     width: 24px;
     top: 12px;
-    left: -64px;
+    left: -72px;
   }
 `
 
