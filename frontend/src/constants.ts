@@ -1,0 +1,6 @@
+export const PrimaryTextColor = "#f8f8f8"
+export const PrimaryDarkTextColor = "#0A0A0AFF"
+export const SecondaryTextColor = "#e5e5e5"
+export const SecondaryTextDarkColor = "#6b6b6b"
+export const BackgroundPrimaryColor = "rgb(233, 247, 255)"
+export const BackgroundSecondaryColor = "rgb(195,236,255)"

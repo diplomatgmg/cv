@@ -2,6 +2,15 @@ import styled from "styled-components"
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi"
 import { FaGithub, FaTelegram } from "react-icons/fa"
 import HexletLogo from "@/assets/img/hexlet.png"
+import { Link } from "@/components/Link.tsx"
+import {
+  BackgroundPrimaryColor,
+  BackgroundSecondaryColor,
+  PrimaryDarkTextColor,
+  PrimaryTextColor,
+  SecondaryTextColor,
+  SecondaryTextDarkColor,
+} from "@/constants.ts"
 
 export const CVPage = () => {
   return (
@@ -123,9 +132,10 @@ export const CVPage = () => {
               <p>Изучаю новые технологии в pet-проектах, через документацию и, конечно, с помощью ИИ куда без него.</p>
 
               <p>
-                Основной язык - Python. Также использую JavaScript и TypeScript. SQL знаю на уровне, достаточном для
-                понимания и оптимизации запросов. <br />С Go пока знаком лишь поверхностно, серьёзной необходимости для
-                изучения не возникало.
+                Основной язык - Python. Также использую JavaScript и TypeScript.
+                <br />
+                SQL знаю на уровне, достаточном для понимания и оптимизации запросов. <br />С Go пока знаком лишь
+                поверхностно, серьёзной необходимости для изучения не возникало.
               </p>
 
               <p>
@@ -141,7 +151,7 @@ export const CVPage = () => {
             </SectionText>
           </Section>
           <Section>
-            <SectionName>Profile</SectionName>
+            <SectionName>Опыт работы</SectionName>
             <SectionExperience>
               <ExperienceHeader>
                 <ExperienceHeaderInner>
@@ -210,63 +220,40 @@ export const CVPage = () => {
             </SectionExperience>
           </Section>
           <Section>
-            <SectionName>Education</SectionName>
+            <SectionName>Обучение</SectionName>
             <EducationItem>
               <EducationImage src={HexletLogo} />
               <EducationWrapper>
                 <EducationInfo>
-                  <EducationName>Hexlet College</EducationName>
+                  <EducationName>Hexlet Колледж</EducationName>
                   <EducationDescription>Front-end Developer</EducationDescription>
                 </EducationInfo>
-                <ExperienceTime>1398 - 3 Years</ExperienceTime>
+                <ExperienceTime>2023 - 2026</ExperienceTime>
               </EducationWrapper>
             </EducationItem>
           </Section>
           <Section>
-            <SectionName>Projects</SectionName>
+            <SectionName>Проекты</SectionName>
             <ProjectSection>
               <ProjectItem>
                 <ProjectIcon />
                 <ProjectDetails>
-                  <ProjectName>React FlatifyCSS</ProjectName>
+                  <ProjectName>
+                    <Link href={"https://github.com/diplomatgmg/scheduler"}>Scheduler</Link>
+                  </ProjectName>
                   <ProjectDescription>
-                    A collection of React flat design components, based on FlatifyCSS.
+                    Бот для постинга в Telegram-каналах: планирование, редактирование, управление.
                   </ProjectDescription>
                 </ProjectDetails>
               </ProjectItem>
               <ProjectItem>
                 <ProjectIcon />
                 <ProjectDetails>
-                  <ProjectName>React FlatifyCSS</ProjectName>
+                  <ProjectName>
+                    <Link href={"https://github.com/diplomatgmg/syncIT"}>syncIT</Link>
+                  </ProjectName>
                   <ProjectDescription>
-                    A collection of React flat design components, based on FlatifyCSS.
-                  </ProjectDescription>
-                </ProjectDetails>
-              </ProjectItem>
-              <ProjectItem>
-                <ProjectIcon />
-                <ProjectDetails>
-                  <ProjectName>React FlatifyCSS</ProjectName>
-                  <ProjectDescription>
-                    A collection of React flat design components, based on FlatifyCSS.
-                  </ProjectDescription>
-                </ProjectDetails>
-              </ProjectItem>
-              <ProjectItem>
-                <ProjectIcon />
-                <ProjectDetails>
-                  <ProjectName>React FlatifyCSS</ProjectName>
-                  <ProjectDescription>
-                    A collection of React flat design components, based on FlatifyCSS.
-                  </ProjectDescription>
-                </ProjectDetails>
-              </ProjectItem>
-              <ProjectItem>
-                <ProjectIcon />
-                <ProjectDetails>
-                  <ProjectName>React FlatifyCSS</ProjectName>
-                  <ProjectDescription>
-                    A collection of React flat design components, based on FlatifyCSS.
+                    Агрегатор IT-вакансий с подбором по стеку и грейду. Вакансии из HH и Telegram.
                   </ProjectDescription>
                 </ProjectDetails>
               </ProjectItem>
@@ -291,15 +278,6 @@ const SquareSecondarySize = "24px"
 const SquarePrimaryBorderRadius = "16px"
 const SquareSecondaryBorderRadius = "8px"
 const SquareLeftMargin = "72px"
-
-const PrimaryTextColor = "#f8f8f8"
-const PrimaryDarkTextColor = "#0A0A0AFF"
-
-const SecondaryTextColor = "#e5e5e5"
-const SecondaryTextDarkColor = "#6b6b6b"
-
-const BackgroundPrimaryColor = "rgb(233, 247, 255)"
-const BackgroundSecondaryColor = "rgb(195,236,255)"
 
 const Wrapper = styled.div`
   background-color: #f0f0f0;
@@ -483,11 +461,8 @@ const SectionText = styled.div`
 `
 
 const EducationItem = styled.div`
-    display: flex;
-    position: relative;
-
-    &::after {
-
+  display: flex;
+  position: relative;
 `
 
 const EducationImage = styled.img`
@@ -742,6 +717,7 @@ const ProjectIcon = styled.div`
     width: ${SquarePrimarySize};
     border-radius: ${SquarePrimaryBorderRadius};
     left: -${SquareLeftMargin};
+    top: -2px;
   }
 
   &:after {
@@ -751,7 +727,7 @@ const ProjectIcon = styled.div`
     height: ${SquareSecondarySize};
     width: ${SquareSecondarySize};
     border-radius: ${SquareSecondaryBorderRadius};
-    top: 16px;
+    top: 14px;
     left: -56px;
   }
 `
