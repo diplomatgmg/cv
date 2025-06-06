@@ -152,11 +152,13 @@ export const CVPage = () => {
             <SectionName>Education</SectionName>
             <EducationItem>
               <EducationImage src={HexletLogo} />
-              <EducationInfo>
-                <EducationName>Hexlet College</EducationName>
-                <EducationDescription>Front-end Developer</EducationDescription>
-              </EducationInfo>
-              <ExperienceTime>1398 - 3 Years</ExperienceTime>
+              <EducationWrapper>
+                <EducationInfo>
+                  <EducationName>Hexlet College</EducationName>
+                  <EducationDescription>Front-end Developer</EducationDescription>
+                </EducationInfo>
+                <ExperienceTime>1398 - 3 Years</ExperienceTime>
+              </EducationWrapper>
             </EducationItem>
           </Section>
           <Section>
@@ -278,6 +280,11 @@ const UpperLeftSidePaper = styled.div`
     padding-right: 0;
     justify-content: space-between;
   }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 const Username = styled.div`
@@ -335,6 +342,11 @@ const UserSocialWrapper = styled.div`
     flex-direction: column;
     justify-content: space-between;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    justify-content: start;
+  }
 `
 
 const Icon = styled.a`
@@ -377,6 +389,11 @@ const SectionItemsWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 const SectionItems = styled.div`
@@ -404,9 +421,17 @@ const EducationImage = styled.img`
   top: 6px;
 `
 
+const EducationWrapper = styled.div`
+  display: flex;
+  margin-left: 40px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`
+
 const EducationInfo = styled.div`
   margin-right: auto;
-  margin-left: 40px;
 `
 
 const EducationName = styled.div`
@@ -438,6 +463,7 @@ const SectionExperience = styled.div`
 
   &:last-child {
     margin-bottom: 0;
+
     &:before {
       height: calc(100% - 2.25rem);
     }
@@ -448,6 +474,11 @@ const ExperienceHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: start;
+  }
 `
 
 const ExperienceHeaderInner = styled.div``
@@ -491,7 +522,13 @@ const ExperienceTime = styled.div`
   padding: 0.5rem 0.75rem;
   border-radius: 1.5rem;
   height: fit-content;
+  width: fit-content;
   font-size: 0.75rem;
+  white-space: nowrap;
+
+  @media (max-width: 768px) {
+    margin-top: 0.5rem;
+  }
 `
 
 const ExperienceDetailsWrapper = styled.div`
@@ -605,8 +642,9 @@ const ProjectSection = styled.div`
 
   &:last-child {
     margin-bottom: 0;
+
     &:before {
-      height: calc(100% - 2.25rem);
+      height: calc(100% - 3rem);
     }
   }
 `
