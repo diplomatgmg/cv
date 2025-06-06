@@ -248,6 +248,10 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   overflow: auto;
+
+  @media (max-width: 1240px) {
+    padding: 0;
+  }
 `
 
 const Paper = styled.div`
