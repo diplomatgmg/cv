@@ -35,35 +35,37 @@ export const CVPage = () => {
                 <UserContactLink>diplomatgmg@gmail.com</UserContactLink>
               </UserContactWrapper>
             </UserDetails>
-            <UserLinkWrapper>
+            <UserSocialWrapper>
               <UserSocial href={"https://t.me/diplomatgmg"} target={"_blank"} rel={"noopener noreferrer"}>
-                <FaTelegram width={"2.5rem"} height={"2.5rem"} />
+                <FaTelegram size={"2.5rem"} />
               </UserSocial>
               <UserSocial href={"https://github.com/diplomatgmg"} target={"_blank"} rel={"noopener noreferrer"}>
-                <FaGithub width={"2.5rem"} height={"2.5rem"} />
+                <FaGithub size={"2.5rem"} />
               </UserSocial>
-            </UserLinkWrapper>
+            </UserSocialWrapper>
           </UpperLeftSidePaper>
           <BottomLeftSidePaper>
             <SectionWrapper>
               <Section>
                 <SectionName>Skills</SectionName>
-                <SectionItems>
-                  <SkillTitle>General Knownledge</SkillTitle>
-                  <SkillNames>HTML, CSS, JavaScript, TypeScript</SkillNames>
-                  <SkillNames>Git, Github, Gitlab</SkillNames>
-                </SectionItems>
-                <SectionItems>
-                  <SkillTitle>Tools & Frameworks</SkillTitle>
-                  <SkillNames>HTML, CSS, TypeScript</SkillNames>
-                  <SkillNames>HTML, CSS, TypeScript</SkillNames>
-                  <SkillNames>HTML, CSS, TypeScript</SkillNames>
-                  <SkillNames>HTML, CSS, TypeScript</SkillNames>
-                </SectionItems>
-                <SectionItems>
-                  <SkillTitle>General Knownledge</SkillTitle>
-                  <SkillNames>HTML, CSS, TypeScript</SkillNames>
-                </SectionItems>
+                <SectionItemsWrapper>
+                  <SectionItems>
+                    <SkillTitle>General Knownledge</SkillTitle>
+                    <SkillNames>HTML, CSS, JavaScript, TypeScript</SkillNames>
+                    <SkillNames>Git, Github, Gitlab</SkillNames>
+                  </SectionItems>
+                  <SectionItems>
+                    <SkillTitle>Tools & Frameworks</SkillTitle>
+                    <SkillNames>HTML, CSS, TypeScript</SkillNames>
+                    <SkillNames>HTML, CSS, TypeScript</SkillNames>
+                    <SkillNames>HTML, CSS, TypeScript</SkillNames>
+                    <SkillNames>HTML, CSS, TypeScript</SkillNames>
+                  </SectionItems>
+                  <SectionItems>
+                    <SkillTitle>General Knownledge</SkillTitle>
+                    <SkillNames>HTML, CSS, TypeScript</SkillNames>
+                  </SectionItems>
+                </SectionItemsWrapper>
               </Section>
             </SectionWrapper>
           </BottomLeftSidePaper>
@@ -148,20 +150,20 @@ export const CVPage = () => {
           </Section>
           <Section>
             <SectionName>Education</SectionName>
-            <EducationWrapper>
+            <EducationItem>
               <EducationImage src={HexletLogo} />
               <EducationInfo>
                 <EducationName>Hexlet College</EducationName>
                 <EducationDescription>Front-end Developer</EducationDescription>
               </EducationInfo>
               <ExperienceTime>1398 - 3 Years</ExperienceTime>
-            </EducationWrapper>
+            </EducationItem>
           </Section>
           <Section>
             <SectionName>Projects</SectionName>
             <ProjectSection>
               <ProjectItem>
-                <ProjectIcon></ProjectIcon>
+                <ProjectIcon />
                 <ProjectDetails>
                   <ProjectName>React FlatifyCSS</ProjectName>
                   <ProjectDescription>
@@ -170,7 +172,7 @@ export const CVPage = () => {
                 </ProjectDetails>
               </ProjectItem>
               <ProjectItem>
-                <ProjectIcon></ProjectIcon>
+                <ProjectIcon />
                 <ProjectDetails>
                   <ProjectName>React FlatifyCSS</ProjectName>
                   <ProjectDescription>
@@ -179,7 +181,7 @@ export const CVPage = () => {
                 </ProjectDetails>
               </ProjectItem>
               <ProjectItem>
-                <ProjectIcon></ProjectIcon>
+                <ProjectIcon />
                 <ProjectDetails>
                   <ProjectName>React FlatifyCSS</ProjectName>
                   <ProjectDescription>
@@ -188,7 +190,7 @@ export const CVPage = () => {
                 </ProjectDetails>
               </ProjectItem>
               <ProjectItem>
-                <ProjectIcon></ProjectIcon>
+                <ProjectIcon />
                 <ProjectDetails>
                   <ProjectName>React FlatifyCSS</ProjectName>
                   <ProjectDescription>
@@ -197,7 +199,7 @@ export const CVPage = () => {
                 </ProjectDetails>
               </ProjectItem>
               <ProjectItem>
-                <ProjectIcon></ProjectIcon>
+                <ProjectIcon />
                 <ProjectDetails>
                   <ProjectName>React FlatifyCSS</ProjectName>
                   <ProjectDescription>
@@ -213,9 +215,19 @@ export const CVPage = () => {
   )
 }
 
-const A4WidthPx = 1558
-const A4HeightPx = 2246
-const BlockPadding = "1.75rem"
+const A4WidthPx = 1240
+const A4HeightPx = 1750
+const BlockPadding = "1.25rem"
+
+const SectionTitleFontSize = "1.75rem"
+const SectionNameFontSize = "1.5rem"
+const SectionTextFontSize = "1rem"
+
+const SquarePrimarySize = "56px"
+const SquareSecondarySize = "24px"
+const SquarePrimaryBorderRadius = "16px"
+const SquareSecondaryBorderRadius = "8px"
+const SquareLeftMargin = "72px"
 
 const PrimaryTextColor = "#f8f8f8"
 const PrimaryDarkTextColor = "#0A0A0AFF"
@@ -224,42 +236,52 @@ const SecondaryTextColor = "#e5e5e5"
 const SecondaryTextDarkColor = "#6b6b6b"
 
 const BackgroundPrimaryColor = "rgb(233, 247, 255)"
-const BackgroundSecondaryColor = "rgb(207, 240, 255)"
+const BackgroundSecondaryColor = "rgb(195,236,255)"
 
 const Wrapper = styled.div`
   background-color: #f0f0f0;
   min-height: 100vh;
-  padding: 4rem 0;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
-  font-size: 2rem;
+  overflow: auto;
 `
 
 const Paper = styled.div`
   background: white;
   width: ${A4WidthPx}px;
-  height: ${A4HeightPx}px;
+  min-height: ${A4HeightPx}px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
   display: flex;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 `
 
 const LeftSidePaper = styled.div`
-  width: 30%;
   background-color: rgb(233, 247, 255);
   color: ${PrimaryTextColor};
+  flex: 0.5;
 `
 
 const UpperLeftSidePaper = styled.div`
   background: #00ffff;
   background: linear-gradient(45deg, rgba(0, 123, 255, 1) 0%, rgba(0, 79, 163, 1) 100%);
   padding: ${BlockPadding};
+
+  @media (max-width: 1024px) {
+    display: flex;
+    padding-bottom: 2.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: space-between;
+  }
 `
 
 const Username = styled.div`
-  font-size: 3.5rem;
+  font-size: 2.75rem;
   line-height: 1;
   letter-spacing: 1px;
   margin: 0;
@@ -270,13 +292,14 @@ const Username = styled.div`
 const Profession = styled.div`
   margin: 0;
   color: ${SecondaryTextColor};
-  font-size: 2rem;
+  font-size: 1.5rem;
 `
 
 const UserInfo = styled.div`
   margin: ${BlockPadding};
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 0.5rem;
 `
 
@@ -295,17 +318,23 @@ const UserContactWrapper = styled.div`
 const UserContactLink = styled.a`
   color: ${PrimaryTextColor};
   font-weight: lighter;
-  font-size: 1.4rem;
+  font-size: 1.15rem;
+  white-space: nowrap;
   text-decoration: none;
   display: flex;
   align-items: center;
   font-style: italic;
 `
 
-const UserLinkWrapper = styled.div`
+const UserSocialWrapper = styled.div`
   display: flex;
   gap: 1.25rem;
   margin: 1.5rem ${BlockPadding} 0;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    justify-content: space-between;
+  }
 `
 
 const Icon = styled.a`
@@ -315,7 +344,7 @@ const Icon = styled.a`
   color: ${PrimaryTextColor};
   opacity: 0.9;
   background-color: rgba(108, 180, 255, 0.25);
-  border-radius: 40%;
+  border-radius: 32px;
 `
 
 const UserContactIcon = styled(Icon)`
@@ -338,9 +367,16 @@ const Section = styled.div`
 
 const SectionName = styled.div`
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: ${SectionTitleFontSize};
   margin-bottom: 1.5rem;
   text-transform: uppercase;
+`
+
+const SectionItemsWrapper = styled.div`
+  @media (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 `
 
 const SectionItems = styled.div`
@@ -348,59 +384,53 @@ const SectionItems = styled.div`
 `
 
 const SectionText = styled.div`
+  font-size: ${SectionTextFontSize};
   color: ${SecondaryTextDarkColor};
-  font-size: 1.5rem;
 `
 
-const EducationWrapper = styled.div`
+const EducationItem = styled.div`
   display: flex;
   position: relative;
 
   &::after {
-    content: "";
-    position: absolute;
-    background-color: ${BackgroundPrimaryColor};
-    height: 80px;
-    width: 80px;
-    border-radius: 24px;
-    top: -6px;
-    left: 12px;
-  }
+
 `
 
 const EducationImage = styled.img`
-  height: 48px;
+  height: 32px;
   z-index: 10;
   position: relative;
-  left: 28px;
+  left: 12px;
   top: 6px;
 `
 
 const EducationInfo = styled.div`
   margin-right: auto;
-  margin-left: 5rem;
+  margin-left: 40px;
 `
 
-const EducationName = styled.div``
+const EducationName = styled.div`
+  font-size: ${SectionNameFontSize};
+`
 
 const EducationDescription = styled.div`
   color: ${SecondaryTextDarkColor};
-  font-size: 1.5rem;
+  font-size: ${SectionTextFontSize};
   font-weight: lighter;
 `
 
 const SectionExperience = styled.div`
-  margin-left: 8rem;
+  margin-left: 4.5rem;
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 
   &:before {
     content: "";
     position: absolute;
     top: 32px;
-    left: -80px;
+    left: -49px;
     width: 10px;
     height: calc(100% + 4rem);
     background-color: ${BackgroundPrimaryColor};
@@ -423,60 +453,60 @@ const ExperienceHeader = styled.div`
 const ExperienceHeaderInner = styled.div``
 
 const ExperienceProfession = styled.div`
-  font-size: 2rem;
+  font-size: ${SectionNameFontSize};
   position: relative;
 
   &:before {
     content: "";
     position: absolute;
     background-color: ${BackgroundPrimaryColor};
-    height: 80px;
-    width: 80px;
-    border-radius: 24px;
-    left: -116px;
-    top: -8px;
+    height: ${SquarePrimarySize};
+    width: ${SquarePrimarySize};
+    border-radius: ${SquarePrimaryBorderRadius};
+    left: -${SquareLeftMargin};
+    top: -4px;
   }
 
   &:after {
     content: "";
     position: absolute;
-    background-color: rgb(124, 215, 255);
-    height: 32px;
-    width: 32px;
-    border-radius: 12px;
-    top: 16px;
-    left: -90px;
+    background-color: ${BackgroundSecondaryColor};
+    height: ${SquareSecondarySize};
+    width: ${SquareSecondarySize};
+    border-radius: ${SquareSecondaryBorderRadius};
+    top: 12px;
+    left: -56px;
   }
 `
 
 const ExperiencePlaceWork = styled.div`
-  font-size: 1.5rem;
   font-weight: lighter;
   color: ${SecondaryTextDarkColor};
 `
 
 const ExperienceTime = styled.div`
   color: ${SecondaryTextDarkColor};
-  font-size: 1.5rem;
   font-weight: lighter;
   background-color: ${BackgroundPrimaryColor};
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 0.75rem;
   border-radius: 1.5rem;
   height: fit-content;
+  font-size: 0.75rem;
 `
 
 const ExperienceDetailsWrapper = styled.div`
   color: ${SecondaryTextDarkColor};
   font-weight: lighter;
-  font-size: 1.5rem;
-  margin-top: 2rem;
+  font-size: 1.25rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
+  margin-top: 1.5rem;
 `
 
 const ExperienceText = styled.div`
   position: relative;
+  font-size: ${SectionTextFontSize};
 
   &:before {
     content: "";
@@ -485,30 +515,31 @@ const ExperienceText = styled.div`
     height: 6px;
     width: 24px;
     top: 12px;
-    left: -72px;
+    left: -48px;
   }
 `
 
 const SkillTitle = styled.div`
   position: relative;
   z-index: 10;
-  font-size: 2rem;
+  font-size: ${SectionNameFontSize};
   margin-bottom: 1.5rem;
 
   &:before {
     content: "";
     position: absolute;
     width: 150px;
-    height: 42px;
+    height: 32px;
     background-color: ${BackgroundSecondaryColor};
     z-index: -1;
     rotate: -5deg;
+    opacity: 0.75;
   }
 `
 
 const SkillNames = styled(SectionText)`
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: ${SectionTextFontSize};
   margin-bottom: 0.5rem;
   position: relative;
   z-index: 10;
@@ -527,7 +558,7 @@ const SkillNames = styled(SectionText)`
     top: 14px;
     left: -21px;
     width: 6px;
-    height: calc(100% + 1rem);
+    height: calc(100% + 0.5rem);
     background-color: ${SecondaryTextDarkColor};
     opacity: 0.15;
   }
@@ -535,10 +566,21 @@ const SkillNames = styled(SectionText)`
   &:last-child::after {
     display: none;
   }
+
+  @media (max-width: 1024px) {
+    margin-left: 0;
+
+    &:before {
+      opacity: 0;
+    }
+    &:after {
+      opacity: 0;
+    }
+  }
 `
 
 const RightSidePaper = styled.div`
-  width: 60%;
+  flex: 1;
   padding: ${BlockPadding};
   display: flex;
   flex-direction: column;
@@ -555,7 +597,7 @@ const ProjectSection = styled.div`
     content: "";
     position: absolute;
     top: 32px;
-    left: 44px;
+    left: 23px;
     width: 10px;
     height: calc(100% + 4rem);
     background-color: ${BackgroundPrimaryColor};
@@ -570,7 +612,7 @@ const ProjectSection = styled.div`
 `
 
 const ProjectItem = styled.div`
-  margin-left: 112px;
+  margin-left: ${SquareLeftMargin};
 `
 
 const ProjectIcon = styled.div`
@@ -580,30 +622,32 @@ const ProjectIcon = styled.div`
     content: "";
     position: absolute;
     background-color: ${BackgroundPrimaryColor};
-    height: 64px;
-    width: 64px;
-    border-radius: 24px;
-    left: -96px;
+    height: ${SquarePrimarySize};
+    width: ${SquarePrimarySize};
+    border-radius: ${SquarePrimaryBorderRadius};
+    left: -${SquareLeftMargin};
   }
 
   &:after {
     content: "";
     position: absolute;
-    background-color: rgb(124, 215, 255);
-    height: 24px;
-    width: 24px;
-    border-radius: 10px;
-    top: 20px;
-    left: -76px;
+    background-color: ${BackgroundSecondaryColor};
+    height: ${SquareSecondarySize};
+    width: ${SquareSecondarySize};
+    border-radius: ${SquareSecondaryBorderRadius};
+    top: 16px;
+    left: -56px;
   }
 `
 
 const ProjectDetails = styled.div``
 
-const ProjectName = styled.div``
+const ProjectName = styled.div`
+  font-size: ${SectionNameFontSize};
+`
 
 const ProjectDescription = styled.div`
   color: ${SecondaryTextDarkColor};
-  font-size: 1.5rem;
+  font-size: ${SectionTextFontSize};
   font-weight: lighter;
 `
