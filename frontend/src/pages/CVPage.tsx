@@ -243,6 +243,7 @@ const BackgroundSecondaryColor = "rgb(195,236,255)"
 const Wrapper = styled.div`
   background-color: #f0f0f0;
   min-height: 100vh;
+  padding: 4rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
