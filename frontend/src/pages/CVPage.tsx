@@ -424,6 +424,7 @@ const EducationImage = styled.img`
 
 const EducationWrapper = styled.div`
   display: flex;
+  flex: 1;
   margin-left: 40px;
 
   @media (max-width: 768px) {
