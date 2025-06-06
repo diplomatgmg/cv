@@ -47,23 +47,54 @@ export const CVPage = () => {
           <BottomLeftSidePaper>
             <SectionWrapper>
               <Section>
-                <SectionName>Skills</SectionName>
+                <SectionName>Навыки</SectionName>
                 <SectionItemsWrapper>
                   <SectionItems>
-                    <SkillTitle>General Knownledge</SkillTitle>
-                    <SkillNames>HTML, CSS, JavaScript, TypeScript</SkillNames>
-                    <SkillNames>Git, Github, Gitlab</SkillNames>
+                    <SkillTitle>General</SkillTitle>
+                    <SkillNames>Python, JavaScript, TypeScript, Go, SQL</SkillNames>
+                    <SkillNames>Git, GitHub, GitLab</SkillNames>
+                    <SkillNames>Linux, MacOS, Ubuntu Server</SkillNames>
+                    <SkillNames>HTTP, REST, OAuth2, JWT</SkillNames>
+                    <SkillNames>SOLID, DRY, KISS</SkillNames>
                   </SectionItems>
+
                   <SectionItems>
-                    <SkillTitle>Tools & Frameworks</SkillTitle>
-                    <SkillNames>HTML, CSS, TypeScript</SkillNames>
-                    <SkillNames>HTML, CSS, TypeScript</SkillNames>
-                    <SkillNames>HTML, CSS, TypeScript</SkillNames>
-                    <SkillNames>HTML, CSS, TypeScript</SkillNames>
+                    <SkillTitle>Back-end</SkillTitle>
+                    <SkillNames>Django, Django REST Framework, FastAPI</SkillNames>
+                    <SkillNames>SQLAlchemy, Pydantic, Alembic</SkillNames>
+                    <SkillNames>Celery, Redis, RabbitMQ</SkillNames>
+                    <SkillNames>asyncio, aiogram, logging</SkillNames>
+                    <SkillNames>PostgreSQL, PostGIS, PgBouncer</SkillNames>
                   </SectionItems>
+
                   <SectionItems>
-                    <SkillTitle>General Knownledge</SkillTitle>
-                    <SkillNames>HTML, CSS, TypeScript</SkillNames>
+                    <SkillTitle>Front-end</SkillTitle>
+                    <SkillNames>HTML5, CSS3</SkillNames>
+                    <SkillNames>React, Vue 3</SkillNames>
+                    <SkillNames>Redux, RTK Query</SkillNames>
+                    <SkillNames>Mantine, styled-components</SkillNames>
+                    <SkillNames>Vite, ESLint, Prettier</SkillNames>
+                  </SectionItems>
+
+                  <SectionItems>
+                    <SkillTitle>DevOps</SkillTitle>
+                    <SkillNames>Docker, Docker Compose</SkillNames>
+                    <SkillNames>CI/CD, GitHub Actions</SkillNames>
+                    <SkillNames>Nginx, Uvicorn, Gunicorn</SkillNames>
+                    <SkillNames>Sentry</SkillNames>
+                  </SectionItems>
+
+                  <SectionItems>
+                    <SkillTitle>Testing</SkillTitle>
+                    <SkillNames>Pytest, Coverage, Unittest</SkillNames>
+                    <SkillNames>Jest, Postman</SkillNames>
+                    <SkillNames>mocker, testcontainers</SkillNames>
+                  </SectionItems>
+
+                  <SectionItems>
+                    <SkillTitle>UI/UX</SkillTitle>
+                    <SkillNames>Figma, Photoshop</SkillNames>
+                    <SkillNames>User Flow</SkillNames>
                   </SectionItems>
                 </SectionItemsWrapper>
               </Section>
@@ -370,6 +401,14 @@ const UserContactIcon = styled(Icon)`
 
 const UserSocial = styled(Icon)`
   padding: 0.75rem;
+
+  & > * {
+    transition: transform 100ms ease;
+  }
+
+  &:hover > * {
+    transform: scale(1.25);
+  }
 `
 
 const BottomLeftSidePaper = styled.div``
@@ -403,6 +442,8 @@ const SectionItemsWrapper = styled.div`
 
 const SectionItems = styled.div`
   margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
 `
 
 const SectionText = styled.div`
@@ -411,10 +452,10 @@ const SectionText = styled.div`
 `
 
 const EducationItem = styled.div`
-  display: flex;
-  position: relative;
+    display: flex;
+    position: relative;
 
-  &::after {
+    &::after {
 
 `
 
@@ -571,7 +612,7 @@ const SkillTitle = styled.div`
   &:before {
     content: "";
     position: absolute;
-    width: 150px;
+    width: 64px;
     height: 32px;
     background-color: ${BackgroundSecondaryColor};
     z-index: -1;
@@ -593,6 +634,7 @@ const SkillNames = styled(SectionText)`
     font-size: 1.4rem;
     position: absolute;
     left: -1.5rem;
+    top: -6px;
   }
 
   &::after {
