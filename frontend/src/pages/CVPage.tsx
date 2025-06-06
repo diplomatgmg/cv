@@ -157,9 +157,58 @@ export const CVPage = () => {
               <ExperienceTime>1398 - 3 Years</ExperienceTime>
             </EducationWrapper>
           </Section>
+          <Section>
+            <SectionName>Projects</SectionName>
+            <ProjectSection>
+              <ProjectItem>
+                <ProjectIcon></ProjectIcon>
+                <ProjectDetails>
+                  <ProjectName>React FlatifyCSS</ProjectName>
+                  <ProjectDescription>
+                    A collection of React flat design components, based on FlatifyCSS.
+                  </ProjectDescription>
+                </ProjectDetails>
+              </ProjectItem>
+              <ProjectItem>
+                <ProjectIcon></ProjectIcon>
+                <ProjectDetails>
+                  <ProjectName>React FlatifyCSS</ProjectName>
+                  <ProjectDescription>
+                    A collection of React flat design components, based on FlatifyCSS.
+                  </ProjectDescription>
+                </ProjectDetails>
+              </ProjectItem>
+              <ProjectItem>
+                <ProjectIcon></ProjectIcon>
+                <ProjectDetails>
+                  <ProjectName>React FlatifyCSS</ProjectName>
+                  <ProjectDescription>
+                    A collection of React flat design components, based on FlatifyCSS.
+                  </ProjectDescription>
+                </ProjectDetails>
+              </ProjectItem>
+              <ProjectItem>
+                <ProjectIcon></ProjectIcon>
+                <ProjectDetails>
+                  <ProjectName>React FlatifyCSS</ProjectName>
+                  <ProjectDescription>
+                    A collection of React flat design components, based on FlatifyCSS.
+                  </ProjectDescription>
+                </ProjectDetails>
+              </ProjectItem>
+              <ProjectItem>
+                <ProjectIcon></ProjectIcon>
+                <ProjectDetails>
+                  <ProjectName>React FlatifyCSS</ProjectName>
+                  <ProjectDescription>
+                    A collection of React flat design components, based on FlatifyCSS.
+                  </ProjectDescription>
+                </ProjectDetails>
+              </ProjectItem>
+            </ProjectSection>
+          </Section>
         </RightSidePaper>
       </Paper>
-      <Paper />
     </Wrapper>
   )
 }
@@ -199,7 +248,7 @@ const Paper = styled.div`
 
 const LeftSidePaper = styled.div`
   width: 30%;
-  background-color: #ccc; // FIXME
+  background-color: rgb(233, 247, 255);
   color: ${PrimaryTextColor};
 `
 
@@ -277,10 +326,7 @@ const UserSocial = styled(Icon)`
   padding: 0.75rem;
 `
 
-const BottomLeftSidePaper = styled.div`
-  height: 100%;
-  background-color: rgb(233, 247, 255);
-`
+const BottomLeftSidePaper = styled.div``
 
 const SectionWrapper = styled.div`
   padding: ${BlockPadding};
@@ -340,6 +386,7 @@ const EducationName = styled.div``
 const EducationDescription = styled.div`
   color: ${SecondaryTextDarkColor};
   font-size: 1.5rem;
+  font-weight: lighter;
 `
 
 const SectionExperience = styled.div`
@@ -496,4 +543,67 @@ const RightSidePaper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 3rem;
+`
+
+const ProjectSection = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 32px;
+    left: 44px;
+    width: 10px;
+    height: calc(100% + 4rem);
+    background-color: ${BackgroundPrimaryColor};
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+    &:before {
+      height: calc(100% - 2.25rem);
+    }
+  }
+`
+
+const ProjectItem = styled.div`
+  margin-left: 112px;
+`
+
+const ProjectIcon = styled.div`
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: ${BackgroundPrimaryColor};
+    height: 64px;
+    width: 64px;
+    border-radius: 24px;
+    left: -96px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: rgb(124, 215, 255);
+    height: 24px;
+    width: 24px;
+    border-radius: 10px;
+    top: 20px;
+    left: -76px;
+  }
+`
+
+const ProjectDetails = styled.div``
+
+const ProjectName = styled.div``
+
+const ProjectDescription = styled.div`
+  color: ${SecondaryTextDarkColor};
+  font-size: 1.5rem;
+  font-weight: lighter;
 `
