@@ -103,11 +103,41 @@ export const CVPage = () => {
         </LeftSidePaper>
         <RightSidePaper>
           <Section>
-            <SectionName>Profile</SectionName>
+            <SectionName>Обо мне</SectionName>
             <SectionText>
-              Over 3 years of experience as a web front-end engineer who is willing to help businesses make products
-              that are accessible and scalable. Core skills include designing, building front-end architectures and
-              giving actionable insights that match computer science and web best practices.
+              <p>
+                С 14 лет работал видеомонтажёром в сфере СМИ. <br />
+                В 16 лет начал изучать программирование, чтобы изменить сферу деятельности. <br />В 2023 году поступил в
+                IT-колледж Хекслет и вхожу в топ 50 учеников.
+              </p>
+              <p>
+                Самоучка. Большую часть навыков приобрёл самостоятельно. <br />
+                Сторонник "популярных" курсов и "быстрых знаний".
+              </p>
+              <p>
+                Верстку не люблю - берусь за неё только при необходимости. <br />
+                Ближе по духу бизнес-логика, архитектура и оптимизация. <br />
+                UI интересует мало, зато UX и чистая архитектура - отдельное удовольствие.
+              </p>
+
+              <p>Изучаю новые технологии в pet-проектах, через документацию и, конечно, с помощью ИИ куда без него.</p>
+
+              <p>
+                Основной язык - Python. Также использую JavaScript и TypeScript. SQL знаю на уровне, достаточном для
+                понимания и оптимизации запросов. <br />С Go пока знаком лишь поверхностно, серьёзной необходимости для
+                изучения не возникало.
+              </p>
+
+              <p>
+                Практикую Linux-администрирование, дома стоит собственный сервер. <br />В TikTok и прочих тайм-киллерах
+                не сижу. Совсем.
+              </p>
+
+              <p style={{ marginBottom: 0 }}>
+                Придерживаюсь принципов чистого кода.
+                <br />
+                SOLID, DRY, KISS, типизация, форматтеры, линтеры - всё на месте.
+              </p>
             </SectionText>
           </Section>
           <Section>
@@ -372,7 +402,7 @@ const UserContactLink = styled.a`
 const UserSocialWrapper = styled.div`
   display: flex;
   gap: 1.25rem;
-  margin: 1.5rem ${BlockPadding} 0;
+  margin: 1.25rem ${BlockPadding} 0;
 
   @media (max-width: 1024px) {
     flex-direction: column;
@@ -407,7 +437,7 @@ const UserSocial = styled(Icon)`
   }
 
   &:hover > * {
-    transform: scale(1.25);
+    transform: scale(1.15);
   }
 `
 
@@ -419,6 +449,7 @@ const SectionWrapper = styled.div`
 
 const Section = styled.div`
   color: ${PrimaryDarkTextColor};
+  margin-bottom: 2rem;
 `
 
 const SectionName = styled.div`
@@ -669,7 +700,6 @@ const RightSidePaper = styled.div`
   padding: ${BlockPadding};
   display: flex;
   flex-direction: column;
-  gap: 3rem;
 `
 
 const ProjectSection = styled.div`
