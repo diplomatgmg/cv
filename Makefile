@@ -1,4 +1,4 @@
-.PHONY: help up stop down deps lint lint-fix
+.PHONY: help up stop down pull deps lint lint-fix
 
 FRONTEND_DIR = frontend
 
@@ -13,6 +13,9 @@ stop: ## compose stop
 
 down: ## compose down
 	@docker compose down
+
+pull: ## compose pull
+	@docker compose pull
 
 deps: ## Установка зависимостей
 	@cd $(FRONTEND_DIR) && bun i --frozen-lockfile
