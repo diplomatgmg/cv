@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import type { ComponentPropsWithoutRef, FC } from "react"
-import { PrimaryDarkTextColor } from "@/constants.ts"
 
 type LinkProps = ComponentPropsWithoutRef<"a">
 
@@ -14,7 +13,7 @@ export const Link: FC<LinkProps> = ({ children, ...props }) => {
 
 const StyledLink = styled.a`
   text-decoration: none;
-  color: ${PrimaryDarkTextColor};
+  color: inherit;
 
   &:hover {
     text-decoration: underline;

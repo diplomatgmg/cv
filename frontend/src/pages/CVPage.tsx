@@ -3,6 +3,7 @@ import { FiPhone, FiMail, FiMapPin } from "react-icons/fi"
 import { FaGithub, FaTelegram } from "react-icons/fa"
 import HexletLogo from "@/assets/img/hexlet.png"
 import StepikLogo from "@/assets/img/stepik.png"
+import AvtoversantLogo from "@/assets/img/avtoversant.svg"
 import { Link } from "@/components/Link.tsx"
 import {
   BackgroundPrimaryColor,
@@ -158,6 +159,11 @@ export const CVPage = () => {
             <SectionName>Опыт работы</SectionName>
             <SectionExperience>
               <ExperienceHeader>
+                <ExperienceImageWrapper>
+                  <Link href={"https://avtoversant.ru"}>
+                    <ExperienceImage src={AvtoversantLogo} />
+                  </Link>
+                </ExperienceImageWrapper>
                 <ExperienceHeaderInner>
                   <ExperienceProfession>Back-end Developer</ExperienceProfession>
                   <ExperiencePlaceWork>
@@ -257,20 +263,28 @@ export const CVPage = () => {
           <Section>
             <SectionName>Обучение</SectionName>
             <EducationItem>
-              <EducationImage src={HexletLogo} />
+              <Link href={"https://hexly.ru"}>
+                <EducationImage src={HexletLogo} />
+              </Link>
               <EducationWrapper>
                 <EducationInfo>
-                  <EducationName>Hexlet Колледж</EducationName>
+                  <EducationName>
+                    <Link href={"https://hexly.ru"}>Hexlet Колледж</Link>
+                  </EducationName>
                   <EducationDescription>Front-end Developer</EducationDescription>
                 </EducationInfo>
                 <ExperienceTime>2023 - 2026</ExperienceTime>
               </EducationWrapper>
             </EducationItem>
             <EducationItem>
-              <EducationImage src={StepikLogo} />
+              <Link href={"https://stepik.org"}>
+                <EducationImage src={StepikLogo} />
+              </Link>
               <EducationWrapper>
                 <EducationInfo>
-                  <EducationName>Stepik</EducationName>
+                  <EducationName>
+                    <Link href={"https://stepik.org"}>Stepik</Link>
+                  </EducationName>
                   <EducationDescription>Python, Django, SQL, JavaScript</EducationDescription>
                 </EducationInfo>
                 <ExperienceTime>2021 - 2023</ExperienceTime>
@@ -456,7 +470,7 @@ const UserContactIcon = styled(Icon)`
   }
 
   &:hover > * {
-    transform: scale(1.15);
+    transform: scale(1.1);
   }
 `
 
@@ -468,7 +482,7 @@ const UserSocial = styled(Icon)`
   }
 
   &:hover > * {
-    transform: scale(1.15);
+    transform: scale(1.1);
   }
 `
 
@@ -539,6 +553,11 @@ const EducationImage = styled.img`
   position: relative;
   left: 12px;
   top: 8px;
+  transition: 100ms ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `
 
 const EducationWrapper = styled.div`
@@ -599,6 +618,23 @@ const ExperienceHeader = styled.div`
   @media (max-width: 576px) {
     flex-direction: column;
     align-items: start;
+  }
+`
+
+const ExperienceImageWrapper = styled.div`
+  position: absolute;
+  top: 4px;
+  z-index: 10;
+  left: -64px;
+`
+
+const ExperienceImage = styled.img`
+  width: 40px;
+  height: 40px;
+  transition: transform 100ms ease;
+
+  &:hover {
+    transform: scale(1.1);
   }
 `
 
@@ -681,7 +717,7 @@ const SkillTitle = styled.div`
   position: relative;
   z-index: 10;
   font-size: ${SectionNameFontSize};
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 
   &:before {
     content: "";
