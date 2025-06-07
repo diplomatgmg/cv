@@ -2,13 +2,13 @@ import styled from "styled-components"
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi"
 import { FaGithub, FaTelegram } from "react-icons/fa"
 import HexletLogo from "@/assets/img/hexlet.png"
+import StepikLogo from "@/assets/img/stepik.png"
 import { Link } from "@/components/Link.tsx"
 import {
   BackgroundPrimaryColor,
   BackgroundSecondaryColor,
   PrimaryDarkTextColor,
   PrimaryTextColor,
-  SecondaryTextColor,
   SecondaryTextDarkColor,
 } from "@/constants.ts"
 
@@ -35,7 +35,7 @@ export const CVPage = () => {
                 <UserContactIcon href={"tel:79992298886"}>
                   <FiPhone size={"1.5rem"} />
                 </UserContactIcon>
-                <UserContactLink>+7 (999) 229 88 86</UserContactLink>
+                <UserContactLink>+7 (999) 229-88-86</UserContactLink>
               </UserContactWrapper>
               <UserContactWrapper>
                 <UserContactIcon href={"mailto:diplomatgmg@gmail.com"}>
@@ -73,7 +73,7 @@ export const CVPage = () => {
                     <SkillNames>SQLAlchemy, Pydantic, Alembic</SkillNames>
                     <SkillNames>Celery, Redis, RabbitMQ</SkillNames>
                     <SkillNames>asyncio, aiogram, logging</SkillNames>
-                    <SkillNames>PostgreSQL, PostGIS, PgBouncer</SkillNames>
+                    <SkillNames>PostgreSQL, PostGIS</SkillNames>
                   </SectionItems>
 
                   <SectionItems>
@@ -155,49 +155,55 @@ export const CVPage = () => {
             <SectionExperience>
               <ExperienceHeader>
                 <ExperienceHeaderInner>
-                  <ExperienceProfession>Front-end Developer</ExperienceProfession>
-                  <ExperiencePlaceWork>HokuBit | Ako Pardazesh Novin Iranian</ExperiencePlaceWork>
-                </ExperienceHeaderInner>
-                <ExperienceHeaderInner>
-                  <ExperienceTime>1401/08 - Until Now</ExperienceTime>
-                </ExperienceHeaderInner>
-              </ExperienceHeader>
-              <ExperienceDetailsWrapper>
-                <ExperienceText>
-                  Designing and implementing features related to cryptocurrencies, such as prediction bot with detailed
-                  charts and information, social media analysis and so on. The main focus was on features that help the
-                  product achieve the necessary parts of the business model, along with improvements for SEO and
-                  accessibility.
-                </ExperienceText>
-                <ExperienceText>
-                  Tools and skills: Chart.js · Daisyui · WebSocket · Redux.js · Highcharts · Tailwind CSS · JavaScript ·
-                  React.js
-                </ExperienceText>
-              </ExperienceDetailsWrapper>
-            </SectionExperience>
-            <SectionExperience>
-              <ExperienceHeader>
-                <ExperienceHeaderInner>
                   <ExperienceProfession>Back-end Developer</ExperienceProfession>
-                  <ExperiencePlaceWork>Nura Cashflow</ExperiencePlaceWork>
+                  <ExperiencePlaceWork>
+                    <Link href={"https://avtoversant.ru/"}>ООО «Абакам» | Автоверсант</Link>
+                  </ExperiencePlaceWork>
                 </ExperienceHeaderInner>
                 <ExperienceHeaderInner>
-                  <ExperienceTime>1401/01 - 7 Months</ExperienceTime>
+                  <ExperienceTime>Авг. 2024 - Сейчас</ExperienceTime>
                 </ExperienceHeaderInner>
               </ExperienceHeader>
               <ExperienceDetailsWrapper>
                 <ExperienceText>
-                  NURA Cashflow is a web-based software that allows financial and business managers to organize their
-                  cash flow and make decisions based on future events. After separating client from server codebase, I
-                  worked on several features, improved layout and overall code quality.
+                  <b>Сфера:</b> B2B SaaS-продукт для управления автопарком и оптимизации логистики.
                 </ExperienceText>
+
                 <ExperienceText>
-                  Tools and skills: Chart.js · Figma · Highcharts · Sass · CSS · Tailwind CSS · WordPress · JavaScript ·
-                  Vue.js
+                  Разрабатывал и поддерживал систему автоматизации учёта и управления автопарками транспортных компаний.
+                  Внедрял новые модули и расширял функциональность в рамках монолитного Django-приложения с последующим
+                  разделением на отдельные сервисы: логистика, заправки, штрафы, ремонты, курьерские службы, интеграции
+                  с 1С и Bitrix24.
                 </ExperienceText>
+
+                <ExperienceText>Разрабатывал REST API для модулей логистики, учёта заправок, ремонтов.</ExperienceText>
+
                 <ExperienceText>
-                  Tailwind CSS · WordPress · JavaScript · Vue.js Tools and skills: Chart.js · Figma · Highcharts · Sass
-                  · CSS
+                  Разработка фоновых задач для Celery: автоматическая загрузка штрафов, обновление цен на АЗС,
+                  синхронизация с 1С и Bitrix24.
+                </ExperienceText>
+
+                <ExperienceText>Реализовал систему разграничения прав доступа и ролей в бизнес-логике.</ExperienceText>
+
+                <ExperienceText>Оптимизировал SQL-запросы, писал кастомные миграции.</ExperienceText>
+
+                <ExperienceText>
+                  Интегрировал CI/CD (GitLab), оптимизировал сборку через Docker, упростил локальную разработку, внедрил
+                  pyproject, django-extensions и uv для удобного управления зависимостями и более удобной локальной
+                  разработки.
+                </ExperienceText>
+
+                <ExperienceText>
+                  Реализовал расширенное логирование HTTP-запросов с помощью кастомного логгера.
+                </ExperienceText>
+
+                <ExperienceText>
+                  Участвовал в обсуждении архитектурных решений и рефакторинге устаревшего кода.
+                </ExperienceText>
+
+                <ExperienceText>
+                  <b>Технологии:</b> Django, DRF, Celery, PostgreSQL + PostGIS, Redis, RabbitMQ, Docker, Docker Compose,
+                  Bitrix24 API, 1С, GitLab CI/CD, requests, Selenium.
                 </ExperienceText>
               </ExperienceDetailsWrapper>
             </SectionExperience>
@@ -205,16 +211,41 @@ export const CVPage = () => {
               <ExperienceHeader>
                 <ExperienceHeaderInner>
                   <ExperienceProfession>Full-stack Developer</ExperienceProfession>
-                  <ExperiencePlaceWork>Freelance</ExperiencePlaceWork>
+                  <ExperiencePlaceWork>Платформа Караулова</ExperiencePlaceWork>
                 </ExperienceHeaderInner>
                 <ExperienceHeaderInner>
-                  <ExperienceTime>1398 - 3 Years</ExperienceTime>
+                  <ExperienceTime>Июнь 2023 - Июль 2024</ExperienceTime>
                 </ExperienceHeaderInner>
               </ExperienceHeader>
               <ExperienceDetailsWrapper>
                 <ExperienceText>
-                  Working as a part-time web developer to help small to medium businesses achieve what they want in the
-                  world-wide web.
+                  <b>Сфера:</b> Медиа-платформа с сетью журналистов и блогеров, создающих независимый контент.
+                </ExperienceText>
+                <ExperienceText>
+                  Отвечал за разработку и поддержку серверной части проекта, а также участвовал в создании
+                  пользовательских интерфейсов.
+                </ExperienceText>
+                <ExperienceText>
+                  Разрабатывал и поддерживал backend на Django: REST API для публикации и модерации материалов,
+                  авторизации пользователей и взаимодействия с системой комментариев.
+                </ExperienceText>
+                <ExperienceText>
+                  Настроил админ-панель для управления контентом и правами доступа редакторов.
+                </ExperienceText>
+                <ExperienceText>
+                  Оптимизировал SQL-запросы, покрывал бизнес-логику тестами, организовал структуру проекта с упором на
+                  читаемость и расширяемость.
+                </ExperienceText>
+                <ExperienceText>
+                  На фронтенде участвовал в вёрстке лендингов и создании, поддержке интерфейса на React и TypeScript.
+                </ExperienceText>
+                <ExperienceText>
+                  Работал Redux для управления состоянием, реализовал ленивую загрузку изображений и видео, что улучшило
+                  производительность интерфейса.
+                </ExperienceText>
+                <ExperienceText>Активно участвовал в планировании, код-ревью внутри команды. </ExperienceText>
+                <ExperienceText>
+                  <b>Технологии:</b> Django, DRF, PostgreSQL, pytest, Docker, Git, React, TypeScript, Redux, HTML, CSS.
                 </ExperienceText>
               </ExperienceDetailsWrapper>
             </SectionExperience>
@@ -229,6 +260,16 @@ export const CVPage = () => {
                   <EducationDescription>Front-end Developer</EducationDescription>
                 </EducationInfo>
                 <ExperienceTime>2023 - 2026</ExperienceTime>
+              </EducationWrapper>
+            </EducationItem>
+            <EducationItem>
+              <EducationImage src={StepikLogo} />
+              <EducationWrapper>
+                <EducationInfo>
+                  <EducationName>Stepik</EducationName>
+                  <EducationDescription>Python, Django, SQL, JavaScript</EducationDescription>
+                </EducationInfo>
+                <ExperienceTime>2021 - 2023</ExperienceTime>
               </EducationWrapper>
             </EducationItem>
           </Section>
@@ -342,7 +383,7 @@ const Username = styled.div`
 
 const Profession = styled.div`
   margin: 0;
-  color: ${SecondaryTextColor};
+  color: #eaeaea;
   font-size: 1.5rem;
 `
 
@@ -405,6 +446,14 @@ const Icon = styled.a`
 
 const UserContactIcon = styled(Icon)`
   padding: 0.5rem;
+
+  & > * {
+    transition: transform 100ms ease;
+  }
+
+  &:hover > * {
+    transform: scale(1.15);
+  }
 `
 
 const UserSocial = styled(Icon)`
@@ -463,6 +512,21 @@ const SectionText = styled.div`
 const EducationItem = styled.div`
   display: flex;
   position: relative;
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: ${BackgroundPrimaryColor};
+    height: ${SquarePrimarySize};
+    width: ${SquarePrimarySize};
+    border-radius: ${SquarePrimaryBorderRadius};
+    top: -4px;
+  }
 `
 
 const EducationImage = styled.img`
@@ -470,7 +534,7 @@ const EducationImage = styled.img`
   z-index: 10;
   position: relative;
   left: 12px;
-  top: 6px;
+  top: 8px;
 `
 
 const EducationWrapper = styled.div`
@@ -518,7 +582,7 @@ const SectionExperience = styled.div`
     margin-bottom: 0;
 
     &:before {
-      height: calc(100% - 2.25rem);
+      height: calc(95%);
     }
   }
 `
@@ -590,7 +654,7 @@ const ExperienceDetailsWrapper = styled.div`
   font-size: 1.25rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.75rem;
   margin-top: 1.5rem;
 `
 
@@ -604,7 +668,7 @@ const ExperienceText = styled.div`
     background-color: ${BackgroundPrimaryColor};
     height: 6px;
     width: 24px;
-    top: 12px;
+    top: 8px;
     left: -48px;
   }
 `
@@ -621,6 +685,7 @@ const SkillTitle = styled.div`
     width: 64px;
     height: 32px;
     background-color: ${BackgroundSecondaryColor};
+    border-radius: 4px;
     z-index: -1;
     rotate: -5deg;
     opacity: 0.75;
@@ -639,15 +704,15 @@ const SkillNames = styled(SectionText)`
     content: "●";
     font-size: 1.4rem;
     position: absolute;
-    left: -1.5rem;
-    top: -6px;
+    left: -24px;
+    top: -5px;
   }
 
   &::after {
     content: "";
     position: absolute;
-    top: 14px;
-    left: -21px;
+    top: 8px;
+    left: -20px;
     width: 6px;
     height: calc(100% + 0.5rem);
     background-color: ${SecondaryTextDarkColor};
@@ -659,14 +724,6 @@ const SkillNames = styled(SectionText)`
   }
 
   @media (max-width: 1024px) {
-    margin-left: 0;
-
-    &:before {
-      opacity: 0;
-    }
-    &:after {
-      opacity: 0;
-    }
   }
 `
 
