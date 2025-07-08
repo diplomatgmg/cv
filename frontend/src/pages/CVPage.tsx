@@ -544,7 +544,7 @@ const SectionText = styled.div`
 const EducationItem = styled.div`
   display: flex;
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 
   &:last-child {
     margin-bottom: 0;
@@ -558,6 +558,22 @@ const EducationItem = styled.div`
     width: ${SquarePrimarySize};
     border-radius: ${SquarePrimaryBorderRadius};
     top: -4px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 32px;
+    left: 23px;
+    width: 10px;
+    height: calc(100% + 2rem);
+    background-color: ${BackgroundPrimaryColor};
+  }
+
+  &:last-child {
+    &:after {
+      height: calc(100% - 3rem);
+    }
   }
 `
 
@@ -792,7 +808,7 @@ const ProjectSection = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 2.25rem;
+  gap: 1.5rem;
 
   &:before {
     content: "";
@@ -800,7 +816,7 @@ const ProjectSection = styled.div`
     top: 32px;
     left: 23px;
     width: 10px;
-    height: calc(100% + 4rem);
+    height: calc(100% + 2rem);
     background-color: ${BackgroundPrimaryColor};
   }
 
