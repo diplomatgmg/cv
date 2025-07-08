@@ -12,6 +12,7 @@ import {
   PrimaryTextColor,
   SecondaryTextDarkColor,
 } from "@/constants.ts"
+import { formatDateRange } from "@/utils.ts"
 
 export const CVPage = () => {
   return (
@@ -171,7 +172,7 @@ export const CVPage = () => {
                   </ExperiencePlaceWork>
                 </ExperienceHeaderInner>
                 <ExperienceHeaderInner>
-                  <ExperienceTime>Авг. 2024 - Сейчас</ExperienceTime>
+                  <ExperienceTime>{formatDateRange("2024-01-01")}</ExperienceTime>
                 </ExperienceHeaderInner>
               </ExperienceHeader>
               <ExperienceDetailsWrapper>
@@ -224,7 +225,7 @@ export const CVPage = () => {
                   <ExperiencePlaceWork>Платформа Караулова</ExperiencePlaceWork>
                 </ExperienceHeaderInner>
                 <ExperienceHeaderInner>
-                  <ExperienceTime>Июнь 2023 - Июль 2024</ExperienceTime>
+                  <ExperienceTime>{formatDateRange("2022-08-01", "2023-10-01")}</ExperienceTime>
                 </ExperienceHeaderInner>
               </ExperienceHeader>
               <ExperienceDetailsWrapper>
@@ -298,6 +299,17 @@ export const CVPage = () => {
                 <ProjectIcon />
                 <ProjectDetails>
                   <ProjectName>
+                    <Link href={"https://github.com/diplomatgmg/sync-it"}>syncIT</Link>
+                  </ProjectName>
+                  <ProjectDescription>
+                    Агрегатор IT-вакансий на микросервисной архитектуре с упором на SOLID и Best Practices
+                  </ProjectDescription>
+                </ProjectDetails>
+              </ProjectItem>
+              <ProjectItem>
+                <ProjectIcon />
+                <ProjectDetails>
+                  <ProjectName>
                     <Link href={"https://github.com/diplomatgmg/scheduler"}>Scheduler</Link>
                   </ProjectName>
                   <ProjectDescription>
@@ -325,7 +337,6 @@ export const CVPage = () => {
 }
 
 const A4WidthPx = 1240
-const A4HeightPx = 1750
 const BlockPadding = "1.25rem"
 
 const SectionTitleFontSize = "1.75rem"
@@ -355,7 +366,6 @@ const Wrapper = styled.div`
 const Paper = styled.div`
   background: white;
   width: ${A4WidthPx}px;
-  min-height: ${A4HeightPx}px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
   display: flex;
@@ -495,6 +505,10 @@ const SectionWrapper = styled.div`
 const Section = styled.div`
   color: ${PrimaryDarkTextColor};
   margin-bottom: 2rem;
+
+  &:last-child {
+    margin-bottom: 1rem;
+  }
 `
 
 const SectionName = styled.div`
