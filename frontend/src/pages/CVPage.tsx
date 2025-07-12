@@ -440,6 +440,7 @@ export const CVPage = () => {
 }
 
 const A4WidthPx = 1240
+const A4HeightPx = 1754
 const BlockPadding = "1.25rem"
 
 const SectionTitleFontSize = "1.75rem"
@@ -459,7 +460,6 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: auto;
 
   @media (max-width: 1240px) {
     padding: 0;
@@ -469,6 +469,10 @@ const Wrapper = styled.div`
 const Paper = styled.div`
   background: white;
   width: ${A4WidthPx}px;
+  height: ${A4HeightPx}px;
+  min-height: ${A4HeightPx}px;
+  max-height: ${A4HeightPx}px;
+
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
   display: flex;
@@ -503,7 +507,7 @@ const UpperLeftSidePaper = styled.div`
   }
 `
 
-const Username = styled.div`
+const Username = styled.h1`
   font-size: 2.75rem;
   line-height: 1;
   letter-spacing: 1px;
@@ -512,7 +516,7 @@ const Username = styled.div`
   font-weight: bold;
 `
 
-const Profession = styled.div`
+const Profession = styled.h2`
   margin: 0;
   color: #eaeaea;
   font-size: 1.5rem;
@@ -526,7 +530,7 @@ const UserInfo = styled.div`
   gap: 0.5rem;
 `
 
-const UserDetails = styled.h6`
+const UserDetails = styled.div`
   margin: ${BlockPadding} ${BlockPadding} 0;
   display: flex;
   flex-direction: column;
@@ -538,7 +542,7 @@ const UserContactWrapper = styled.div`
   gap: 0.75rem;
 `
 
-const UserContactLink = styled.a`
+const UserContactLink = styled.span`
   color: ${PrimaryTextColor};
   font-weight: lighter;
   font-size: 1.15rem;
@@ -546,7 +550,6 @@ const UserContactLink = styled.a`
   text-decoration: none;
   display: flex;
   align-items: center;
-  font-style: italic;
 `
 
 const UserSocialWrapper = styled.div`
@@ -605,7 +608,7 @@ const SectionWrapper = styled.div`
   padding: ${BlockPadding};
 `
 
-const Section = styled.div`
+const Section = styled.section`
   color: ${PrimaryDarkTextColor};
   margin-bottom: 2rem;
 
@@ -614,9 +617,10 @@ const Section = styled.div`
   }
 `
 
-const SectionName = styled.div`
+const SectionName = styled.h3`
   font-weight: bold;
   font-size: ${SectionTitleFontSize};
+  margin-top: 0;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
 `
@@ -912,6 +916,18 @@ const RightSidePaper = styled.div`
   padding: ${BlockPadding};
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
+
+  @media print {
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+    width: 210mm;
+    height: 297mm;
+    box-shadow: none;
+    overflow: visible;
+  }
 `
 
 const ProjectSection = styled.div`
