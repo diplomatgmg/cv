@@ -108,6 +108,16 @@ export const CVPage = () => {
                     <SkillNames>Figma, Photoshop</SkillNames>
                     <SkillNames>User Flow</SkillNames>
                   </SectionItems>
+
+                  <SectionItems>
+                    <SkillTitle>Soft skills</SkillTitle>
+                    <SkillNames>Стрессоустойчивость</SkillNames>
+                    <SkillNames>Обучаемость</SkillNames>
+                    <SkillNames>Ответственность</SkillNames>
+                    <SkillNames>Коммуникабельность</SkillNames>
+                    <SkillNames>Организованность</SkillNames>
+                    <SkillNames>Трудолюбие</SkillNames>
+                  </SectionItems>
                 </SectionItemsWrapper>
               </Section>
             </SectionWrapper>
@@ -621,7 +631,7 @@ const SectionName = styled.h3`
   font-weight: bold;
   font-size: ${SectionTitleFontSize};
   margin-top: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   text-transform: uppercase;
 `
 
@@ -638,7 +648,7 @@ const SectionItemsWrapper = styled.div`
 `
 
 const SectionItems = styled.div`
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
   display: flex;
   flex-direction: column;
 `
