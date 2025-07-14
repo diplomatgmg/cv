@@ -472,13 +472,13 @@ const Paper = styled.div`
   height: ${A4HeightPx}px;
   min-height: ${A4HeightPx}px;
   max-height: ${A4HeightPx}px;
-
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
   display: flex;
 
   @media (max-width: 1024px) {
     flex-direction: column;
+    box-shadow: none;
   }
 `
 
@@ -906,9 +906,6 @@ const SkillNames = styled(SectionText)`
   &:last-child::after {
     display: none;
   }
-
-  @media (max-width: 1024px) {
-  }
 `
 
 const RightSidePaper = styled.div`
@@ -917,6 +914,10 @@ const RightSidePaper = styled.div`
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
+
+  @media (max-width: 1024px) {
+    overflow-y: unset;
+  }
 
   @media print {
     @page {
