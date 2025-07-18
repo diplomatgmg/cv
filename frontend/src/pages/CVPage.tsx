@@ -188,7 +188,7 @@ export const CVPage = () => {
                   </ExperiencePlaceWork>
                 </ExperienceHeaderInner>
                 <ExperienceHeaderInner>
-                  <ExperienceTime>{formatDateRange("2024-01-01")}</ExperienceTime>
+                  <ExperienceTime>{formatDateRange("2024-08-01", "2025-07-01")}</ExperienceTime>
                 </ExperienceHeaderInner>
               </ExperienceHeader>
               <ExperienceDetailsWrapper>
