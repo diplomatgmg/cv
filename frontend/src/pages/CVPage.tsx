@@ -139,7 +139,6 @@ export const CVPage = () => {
               <p>
                 Верстку не люблю - берусь за неё только при необходимости. <br />
                 Ближе по духу бизнес-логика, архитектура и оптимизация. <br />
-                UI интересует мало, зато UX и чистая архитектура - отдельное удовольствие.
               </p>
 
               <p>Изучаю новые технологии в pet-проектах, через документацию и, конечно, с помощью ИИ куда без него.</p>
@@ -159,7 +158,7 @@ export const CVPage = () => {
               <p style={{ marginBottom: 0 }}>
                 Придерживаюсь принципов чистого кода.
                 <br />
-                SOLID, DRY, KISS, типизация, форматтеры, линтеры - всё на месте.
+                SOLID, DRY, KISS, типизация, форматтеры, линтеры.
               </p>
             </SectionText>
           </Section>
@@ -199,8 +198,7 @@ export const CVPage = () => {
                 <ExperienceText>
                   Разрабатывал и поддерживал систему автоматизации учёта и управления автопарками транспортных компаний.
                   Внедрял новые модули и расширял функциональность в рамках монолитного Django-приложения с последующим
-                  разделением на отдельные сервисы: логистика, заправки, штрафы, ремонты, курьерские службы, интеграции
-                  с 1С и Bitrix24.
+                  разделением на отдельные сервисы: логистика, заправки, штрафы, ремонты, курьерские службы.
                 </ExperienceText>
 
                 <ExperienceText>Разрабатывал REST API для модулей логистики, учёта заправок, ремонтов.</ExperienceText>
@@ -214,10 +212,11 @@ export const CVPage = () => {
 
                 <ExperienceText>Оптимизировал SQL-запросы, писал кастомные миграции.</ExperienceText>
 
+                <ExperienceText>Интегрировал CI/CD (GitLab) и оптимизировал сборку через Docker.</ExperienceText>
+
                 <ExperienceText>
-                  Интегрировал CI/CD (GitLab), оптимизировал сборку через Docker, упростил локальную разработку, внедрил
-                  pyproject, django-extensions и uv для удобного управления зависимостями и более удобной локальной
-                  разработки.
+                  Упростил локальную разработку, внедрил pyproject, django-extensions и uv для удобного управления
+                  зависимостями и более удобной локальной разработки.
                 </ExperienceText>
 
                 <ExperienceText>
@@ -225,7 +224,7 @@ export const CVPage = () => {
                 </ExperienceText>
 
                 <ExperienceText>
-                  Участвовал в обсуждении архитектурных решений и рефакторинге устаревшего кода.
+                  Участвовал в обсуждении архитектурных решений и внедрении новых технологий.
                 </ExperienceText>
 
                 <ExperienceText>
@@ -244,36 +243,50 @@ export const CVPage = () => {
                 <ExperienceHeaderInner>
                   <ExperienceProfession>Back-end Developer</ExperienceProfession>
                   <ExperiencePlaceWork>
-                    <Link href={"https://avtoversant.ru/"}>ИП | Teccod</Link>
+                    <Link href={"https://teccod.ru/"}>ИП | Teccod</Link>
                   </ExperiencePlaceWork>
                 </ExperienceHeaderInner>
                 <ExperienceHeaderInner>
-                  <ExperienceTime>{formatDateRange("2023-10-01", "2024-01-01")}</ExperienceTime>
+                  <ExperienceTime>{formatDateRange("2023-10-01", "2024-06-01")}</ExperienceTime>
                 </ExperienceHeaderInner>
               </ExperienceHeader>
               <ExperienceDetailsWrapper>
                 <ExperienceText>
-                  Проектная работа.
-                  <br />
                   <b>Сфера:</b> IT-консалтинг.
                 </ExperienceText>
 
-                <ExperienceText>Разрабатывал и поддержка веб-приложения с использованием DRF и Next.js.</ExperienceText>
+                <ExperienceText>
+                  Разрабатывал REST API для внутренних B2B-решений: учёт данных, отчётность, работа с внешними
+                  сервисами.
+                </ExperienceText>
 
-                <ExperienceText>Писал Docker, Docker compose для контейнеризации приложений.</ExperienceText>
-
-                <ExperienceText>Занимался документацией и рефакторингом.</ExperienceText>
+                <ExperienceText>Оптимизация сложных SQL-запросов для повышения производительности.</ExperienceText>
 
                 <ExperienceText>
-                  Разрабатывал/Интегрировал сторонние сервисы через API: работа с валютой, парсеры.
+                  Разрабатывал и поддерживал веб-приложения с использованием DRF и Next.js.
+                </ExperienceText>
+
+                <ExperienceText>Реализовал контейнеризацию приложения с помощью Docker, Docker compose.</ExperienceText>
+
+                <ExperienceText>Занимался документацией и рефакторингом существующего кода.</ExperienceText>
+
+                <ExperienceText>
+                  Разрабатывал/Интегрировал сторонние сервисы через API: работа с валютой, метрики.
+                </ExperienceText>
+
+                <ExperienceText>
+                  Писал парсеры сайтов и данных с использованием Selenium, BeautifulSoup, requests.
+                </ExperienceText>
+
+                <ExperienceText>
+                  Дорабатывал и поддерживал клиентскую части на React, Next.js. Писал новые компонентов, правил баги,
+                  улучшал UX.
                 </ExperienceText>
 
                 <ExperienceText>Оптимизировал SQL запросы.</ExperienceText>
 
-                <ExperienceText>Верстка, доработка фронтенда, реализация новых компонентов.</ExperienceText>
-
                 <ExperienceText>
-                  <b>Технологии:</b> Python, DRF, Selenium, requests, bs4, React, Next.js, Redux, Docker.
+                  <b>Технологии:</b> Python, DRF, Selenium, requests, BeautifulSoup, React, Next.js, Redux, Docker.
                 </ExperienceText>
               </ExperienceDetailsWrapper>
             </SectionExperience>
@@ -292,28 +305,26 @@ export const CVPage = () => {
                   <b>Сфера:</b> Медиа-платформа с сетью журналистов и блогеров, создающих независимый контент.
                 </ExperienceText>
                 <ExperienceText>
-                  Отвечал за разработку и поддержку серверной части проекта, а также участвовал в создании
-                  пользовательских интерфейсов.
+                  Отвечал за разработку и поддержку серверной части проекта, а также участвовал в создании UI.
                 </ExperienceText>
                 <ExperienceText>
-                  Разрабатывал и поддерживал backend на Django: REST API для публикации и модерации материалов,
-                  авторизации пользователей и взаимодействия с системой комментариев.
+                  Дорабатывал REST API для публикации и модерации материалов, авторизации пользователей и взаимодействия
+                  с системой комментариев.
                 </ExperienceText>
                 <ExperienceText>
-                  Настроил админ-панель для управления контентом и правами доступа редакторов.
+                  Настраивал/оптимизировал админ-панель для управления контентом и правами доступа.
                 </ExperienceText>
                 <ExperienceText>
-                  Оптимизировал SQL-запросы, покрывал бизнес-логику тестами, организовал структуру проекта с упором на
-                  читаемость и расширяемость.
+                  Оптимизировал SQL-запросы, покрывал бизнес-логику тестами, дорабатывал структуру проекта.
                 </ExperienceText>
                 <ExperienceText>
-                  На фронтенде участвовал в вёрстке лендингов и создании, поддержке интерфейса на React и TypeScript.
+                  Участвовал в вёрстке лендингов, создании и поддержке интерфейса на React и TypeScript.
                 </ExperienceText>
                 <ExperienceText>
-                  Работал Redux для управления состоянием, реализовал ленивую загрузку изображений и видео, что улучшило
-                  производительность интерфейса.
+                  Работал с Redux для управления состоянием, реализовал ленивую загрузку изображений и видео для
+                  оптимизации производительности UI/UX.
                 </ExperienceText>
-                <ExperienceText>Активно участвовал в планировании, код-ревью внутри команды. </ExperienceText>
+                <ExperienceText>Участвовал в планировании и код-ревью. </ExperienceText>
                 <ExperienceText>
                   <b>Технологии:</b> Django, DRF, PostgreSQL, pytest, Docker, Git, React, TypeScript, Redux, HTML, CSS.
                 </ExperienceText>
@@ -321,13 +332,10 @@ export const CVPage = () => {
             </SectionExperience>
             <SectionExperience>
               <ExperienceHeader>
-                <ExperienceImageWrapper>
-                  <Link href={"https://syncit.space/"}></Link>
-                </ExperienceImageWrapper>
                 <ExperienceHeaderInner>
                   <ExperienceProfession>Back-end Developer</ExperienceProfession>
                   <ExperiencePlaceWork>
-                    <Link href={"https://avtoversant.ru/"}>Pet-project</Link>
+                    <Link href={"https://github.com/diplomatgmg/sync-it"}>Pet-project</Link>
                   </ExperiencePlaceWork>
                 </ExperienceHeaderInner>
                 <ExperienceHeaderInner>
@@ -343,7 +351,7 @@ export const CVPage = () => {
 
                 <ExperienceText>
                   Спроектировал и разработал с нуля систему на микросервисной архитектуре для парсинга, обработки и
-                  анализа IT-вакансий.
+                  анализа релевантных IT-вакансий.
                 </ExperienceText>
 
                 <ExperienceText>
@@ -412,10 +420,10 @@ export const CVPage = () => {
                 <ProjectIcon />
                 <ProjectDetails>
                   <ProjectName>
-                    <Link href={"https://github.com/diplomatgmg/sync-it"}>syncIT</Link>
+                    <Link href={"https://github.com/diplomatgmg/sync-it"}>syncIT v2</Link>
                   </ProjectName>
                   <ProjectDescription>
-                    Агрегатор IT-вакансий на микросервисной архитектуре с упором на SOLID и Best Practices
+                    Агрегатор IT-вакансий на микросервисах с упором на Best Practices и актуальные технологии.
                   </ProjectDescription>
                 </ProjectDetails>
               </ProjectItem>
@@ -934,6 +942,7 @@ const RightSidePaper = styled.div`
       size: A4 portrait;
       margin: 0;
     }
+
     width: 210mm;
     height: 297mm;
     box-shadow: none;
