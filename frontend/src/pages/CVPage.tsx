@@ -181,7 +181,9 @@ export const CVPage = () => {
                   </Link>
                 </ExperienceImageWrapper>
                 <ExperienceHeaderInner>
-                  <ExperienceProfession>Back-end Developer</ExperienceProfession>
+                  <ExperienceProfession>
+                    Back-end Developer
+                  </ExperienceProfession>
                   <ExperiencePlaceWork>
                     <Link href={"https://avtoversant.ru/"}>ООО «Абакам» | Автоверсант</Link>
                   </ExperiencePlaceWork>
