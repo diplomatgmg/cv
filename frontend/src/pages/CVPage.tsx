@@ -13,7 +13,7 @@ import {
   PrimaryTextColor,
   SecondaryTextDarkColor,
 } from "@/constants.ts"
-import { formatDateRange, getWorkExperience } from "@/utils.ts"
+import { formatDateRange } from "@/utils.ts"
 
 export const CVPage = () => {
   return (
@@ -170,7 +170,7 @@ export const CVPage = () => {
             <SectionName>
               <WorkExperienceWrapper>
                 <span>Опыт работы</span>
-                <ExperienceTime>{getWorkExperience()}</ExperienceTime>
+                <ExperienceTime>{formatDateRange("2022-05-01", "2025-07-01")}</ExperienceTime>
               </WorkExperienceWrapper>
             </SectionName>
             <SectionExperience>
@@ -181,9 +181,7 @@ export const CVPage = () => {
                   </Link>
                 </ExperienceImageWrapper>
                 <ExperienceHeaderInner>
-                  <ExperienceProfession>
-                    Back-end Developer
-                  </ExperienceProfession>
+                  <ExperienceProfession>Back-end Developer</ExperienceProfession>
                   <ExperiencePlaceWork>
                     <Link href={"https://avtoversant.ru/"}>ООО «Абакам» | Автоверсант</Link>
                   </ExperiencePlaceWork>
