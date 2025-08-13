@@ -75,7 +75,7 @@ export const CVPage = () => {
                     <SkillNames>Django, Django REST Framework, FastAPI</SkillNames>
                     <SkillNames>SQLAlchemy, Pydantic, Alembic</SkillNames>
                     <SkillNames>Celery, Redis, RabbitMQ</SkillNames>
-                    <SkillNames>asyncio, aiogram, logging</SkillNames>
+                    <SkillNames>asyncio, aiogram</SkillNames>
                     <SkillNames>PostgreSQL, PostGIS</SkillNames>
                   </SectionItems>
 
@@ -100,7 +100,6 @@ export const CVPage = () => {
                     <SkillTitle>Testing</SkillTitle>
                     <SkillNames>Pytest, Coverage, Unittest</SkillNames>
                     <SkillNames>Jest, Postman</SkillNames>
-                    <SkillNames>mocker, testcontainers</SkillNames>
                   </SectionItems>
 
                   <SectionItems>
